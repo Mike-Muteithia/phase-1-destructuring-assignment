@@ -1,6 +1,24 @@
 const farmAnimals = 'cow horse sheep pig chicken';
+let [moo, neigh, baa, oink, cluck] = farmAnimals.split(' ')
+console.log(moo, neigh, baa, oink, cluck);
+
+let [bessie, , dolly, babe, little] = farmAnimals.split(' ');
+console.log(bessie, dolly, babe, little);
+
+let [blackAndWhite, , black, pink, ] = farmAnimals.split(' ');
+console.log(blackAndWhite, black, pink)
+
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+let [red, orange, yellow, green, blue, indigo, violet] = colors;
+// console.log(red);
+
+let [r, o, y, g, b, , v] = colors;
+
+let[ , , , , , indg, ] = colors;
+console.log(indg)
+
 
 const muppet = {
   muppetName: 'Miss Piggy',
@@ -9,6 +27,15 @@ const muppet = {
   job: 'Cast member of The Muppet Show',
   partner: 'Kermit'
 };
+let {muppetName, color, song, job, partner} = muppet;
+// color;
+job;
+partner;
+
+// let {job, partner} = muppet;
+// job;
+// partner;
+
 
 const nestedMuppet = {
   nestedName: 'Kermit',
@@ -24,6 +51,14 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+let {nestedName, nestedColor, album, nestedJob, nestedPartner} = nestedMuppet;
+console.log(album);
+
+let {song2, song4} = nestedMuppet.album.theMuppetMovie;
+song2;
+song4;
+
+
 
 // Strings
 
@@ -46,3 +81,66 @@ const nestedMuppet = {
 // 7. Use destructuring to assign all variables using the keys as the variable names
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+
+
+//> Use Destructuring Assignment to Assign Data to Variables
+
+/* const doggie = {
+  name: 'Buzz',
+  breed: 'Great Pryenees',
+  furColor: 'black and white',
+  activityLevel: 'sloth-like',
+  favoriteFood: 'hot dogs'
+};
+// const name = doggie.name;
+// const breed = doggie.breed;
+// name;
+// breed;
+
+// const { name, breed} = doggie;
+// name;
+// breed;
+ */
+
+/* const doggie = {
+  name: 'Buzz',
+  breed: 'Great Pryenees',
+  furColor: 'black and white',
+  activityLevel: 'sloth-like',
+  favoriteFoods: {
+    meats:{
+      ham: 'smoked',
+      hotDog: 'Oscar Meyer',
+    },
+    chesses:{
+      anmerican: 'kraft'
+    }
+  }
+};
+
+// const { ham, hotDog} = doggie.favoriteFoods.meats
+// ham;
+// hotDog;
+ */
+
+//> Uisng Destructuring Assignments with Arrays
+
+/* const dogs = ['Great Pryenees', 'Pug', 'Bull Mastiff'];
+
+// const [medium, small, giant] = dogs;
+// console.log(medium, small, giant);
+
+// const [, small, giant] = dogs;
+// console.log(small, giant);
+ */
+
+//> Using Destructuring Assignment with Strings
+
+/* const dogsName = 'Sir Woody BarksAlot';
+
+// const [title, firstName, lastName] = dogsName.split(' ');
+// console.log(title, firstName, lastName);
+
+// const [title, , lastName] = dogsName.split(' ');
+// console.log(title, lastName);
+ */
